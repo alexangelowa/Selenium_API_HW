@@ -21,7 +21,6 @@ public class homework {
 
     @BeforeMethod
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.get("http://auto.pragmatic.bg/manage");
