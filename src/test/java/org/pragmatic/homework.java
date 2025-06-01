@@ -21,6 +21,8 @@ public class homework {
 
     @BeforeMethod
     public void setUp() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(new String[]{"--start-maximized", "--disable-extensions"});
         driver = new ChromeDriver();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.get("http://auto.pragmatic.bg/manage");
